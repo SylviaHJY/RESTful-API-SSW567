@@ -15,7 +15,7 @@ class TestGetUserCommits(unittest.TestCase):
         unittest.mock.Mock(status_code=200, json=lambda: [{"name": "csp", "url": "https://api.github.com/repos/richkempinski/csp"}]),
         unittest.mock.Mock(status_code=200, json=lambda: [1, 2])  # Two commits
     ]
-    self.assertEqual(getUserCommits("richkempinski")[0], "Repo: csp Number of commits: 2\n")
+     self.assertEqual(getUserCommits("richkempinski")[0], "Repo: csp Number of commits: 2\n")
 
 
 if __name__ == '__main__':
