@@ -31,7 +31,7 @@ def getUserCommits(userID):
         repo_name = repo["name"]
         commit_url = repo["url"] + "/commits"
         commit_response = requests.get(commit_url)
-        commit_data = json.loads(commit_response.content.decode('utf-8'))
+        commit_data = commit_response.json()
         if len(commit_data) == 0:
             commit_count = 0
         else:

@@ -11,11 +11,12 @@ class TestGetUserCommits(unittest.TestCase):
 
     @patch('requests.get')
     def test_get_user_commits(self, mock_get):
-        mock_get.side_effect = [
-            unittest.mock.Mock(status_code=200, json=lambda: [{"name": "csp", "url": "https://api.github.com/repos/richkempinski/csp"}]),
-            unittest.mock.Mock(status_code=200, json=lambda: [1, 2])  # Two commits
-        ]
-        self.assertEqual(getUserCommits("richkempinski")[0], "Repo: csp Number of commits: 2\n")
+     mock_get.side_effect = [
+        unittest.mock.Mock(status_code=200, json=lambda: [{"name": "csp", "url": "https://api.github.com/repos/richkempinski/csp"}]),
+        unittest.mock.Mock(status_code=200, json=lambda: [1, 2])  # Two commits
+    ]
+    self.assertEqual(getUserCommits("richkempinski")[0], "Repo: csp Number of commits: 2\n")
+
 
 if __name__ == '__main__':
     print('Running unit tests')
