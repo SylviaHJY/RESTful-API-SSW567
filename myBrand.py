@@ -9,4 +9,4 @@ def my_brand(assignment):
   print('=*=*=*= At:', now, 'the function was called, obtained from a library function call =*=*=*= ');
   
 
-my_brand("Homework 04a - Develop with the Perspective of the Tester in mind");
+my_brand("HW 05a - Isolate External Dependencies");
